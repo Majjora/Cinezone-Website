@@ -1,0 +1,450 @@
+﻿/* Ajuste de responsividade para telas menores */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column; /* Organiza o cabeçalho em coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens dentro do cabeçalho */
+        margin: 20px; /* Ajusta a margem do cabeçalho */
+    }
+
+    .cinezone-logo {
+        margin-top: 0; /* Remove a margem superior */
+        width: 50vw; /* Largura proporcional para telas pequenas */
+        height: 50vw; /* Altura proporcional */
+    }
+
+    .language-selector, .login-container {
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        margin-top: 10px; /* Ajusta a margem superior */
+    }
+
+    .login-form {
+        width: 90%; /* Faz o formulário ocupar 90% da largura da tela */
+        padding: 20px; /* Ajusta o padding do formulário */
+    }
+
+    .login-form input {
+        width: 100%; /* Torna os campos de entrada responsivos */
+        padding: 12px; /* Ajusta o padding */
+    }
+
+    /* Ajuste no botão de login */
+    .login-container button {
+        width: 100%; /* O botão ocupa toda a largura */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Organiza o rodapé em coluna */
+        align-items: center; /* Centraliza os itens do rodapé */
+    }
+
+    .footer-info, .footer-links, .footer-social, .footer-newsletter {
+        flex: 1 1 100%; /* Faz as colunas ocuparem 100% da largura em telas pequenas */
+        margin-bottom: 20px; /* Espaçamento entre os itens do rodapé */
+    }
+
+    /* Ajuste para o botão principal */
+    .button-principal {
+        width: 80%; /* Faz o botão principal ocupar mais largura */
+        height: 50px; /* Ajusta a altura do botão */
+        font-size: 16px; /* Tamanho de fonte mais adequado para telas menores */
+    }
+
+    /* Ajuste para as imagens */
+    .imagens-container-borda {
+        width: 90%; /* Ajusta a largura das imagens */
+        height: auto; /* Torna a altura das imagens proporcional */
+    }
+    
+    .imagens-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Margem superior */
+        gap: 10px; /* Espaço entre as imagens */
+    }
+    
+}
+
+/* Resetando margens e espaçamentos */
+* {
+    margin: 0; /* Remove todas as margens */
+    padding: 0; /* Remove todos os espaçamentos */
+    box-sizing: border-box; /* Melhora o controle de caixas */
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Estilo do corpo da página */
+body {
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    width: 100%;
+    background-image: url('../images/fundo.png'); /* Define a imagem de fundo */
+    background-color: #000000;
+    box-shadow: 344px 390px 950px rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz a imagem cobrir toda a área disponível */
+    background-position: center; /* Garante que a imagem fique centralizada */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte do corpo */
+    font-size: 16px; /* Define o tamanho da fonte */
+  
+}
+
+/* Cabeçalho da página */
+.cabecalho {
+    margin: 10px 15%; /* Define as margens superior e inferior */
+    display: flex; /* Flexbox para disposição dos itens */
+    justify-content: space-between; /* Espaça os itens do cabeçalho */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+.cinezone-logo {
+    width: 250px; /* Define a largura do logo */
+    height: 250px; /* Define a altura do logo */
+    margin-top: -70px; /* Ajusta a margem superior para posicionar o logo */
+    box-shadow: 4 40px 1px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao logo */
+}
+
+/* Posicionando o seletor de idioma ao lado do botão "Entrar" */
+.language-selector {
+    display: flex; /* Flexbox para alinhamento do seletor de idioma */
+    margin-left: auto; /* Alinha o seletor à direita */
+    margin-top: -50px; /* Ajusta a margem superior */
+}
+
+.language-selector select {
+    background-color: black; /* Fundo preto para o seletor */
+    color: white; /* Cor do texto branco */
+    border: 2px solid #ffffff; /* Borda branca */
+    border-radius: 15%; /* Bordas arredondadas */
+    width: 120px; /* Largura fixa */
+    height: 50px; /* Altura consistente */
+    padding: 10px; /* Padding interno */
+    font-size: 16px; /* Tamanho da fonte */
+    appearance: none; /* Remove a aparência padrão */
+}
+
+.language-selector option {
+    background-color: black; /* Fundo preto para as opções */
+    color: white; /* Cor do texto branco */
+}
+
+/* Container do botão de login */
+.login-container {
+    display: flex; /* Flexbox para posicionamento */
+    margin-left: 20px; /* Margem à esquerda */
+    margin-top: -50px; /* Ajuste na margem superior */
+}
+
+/* Estilizando o botão de login */
+.login-container button {
+    background-color: #2198FE; /* Cor de fundo azul do botão */
+    color: white; /* Cor do texto branco */
+    border-radius: 15%; /* Bordas arredondadas */
+    width: 120px; /* Largura do botão */
+    height: 50px; /* Altura consistente */
+    padding: 10px; /* Padding interno */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.login-container button:hover {
+    background-color: #1784cc; /* Cor ao passar o mouse */
+}
+
+/* Estilizando o formulário de login */
+.login-form {
+    color: rgba(179, 182, 184, 0.822); /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Posição fixa na tela */
+    top: 50%; /* Alinhamento vertical */
+    left: 50%; /* Alinhamento horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o formulário */
+    background-color: rgb(15, 15, 15); /* Cor de fundo do formulário */
+    padding: 40px; /* Padding interno */
+    border: 2px solid #3f3f3fe8; /* Borda sutil */
+    border-radius: 30px; /* Bordas arredondadas */
+    text-align: center; /* Alinha o texto ao centro */
+    transition: opacity 0.5s ease; /* Transição suave de opacidade */
+    opacity: 0; /* Inicialmente invisível */
+}
+
+.login-form.show {
+    display: block; /* Exibe o formulário quando ativado */
+    opacity: 1; /* Torna visível */
+}
+
+/* Estilo dos campos de entrada */
+.login-form input {
+    display: block; /* Exibe os campos como blocos */
+    color: rgba(179, 182, 184, 0.822); /* Cor do texto */
+    background-color: rgb(15, 15, 15); /* Fundo do campo */
+    border: 2px solid #3f3f3fe8; /* Borda sutil */
+    border-radius: 30px; /* Bordas arredondadas */
+    width: 250px; /* Largura dos campos */
+    margin: 15px 0; /* Margem superior e inferior */
+    padding: 10px; /* Padding interno */
+}
+
+/* Estilizando os botões do formulário */
+.login-form button {
+    width: 100%; /* O botão ocupa toda a largura */
+    padding: 15px; /* Padding interno */
+    background-color: rgba(33,152,254,255); /* Cor de fundo azul */
+    color: white; /* Cor do texto branco */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    margin-top: 20px; /* Margem superior */
+    border-radius: 30px; /* Bordas arredondadas */
+}
+
+.login-form button:hover {
+    background-color: #1784cc; /* Cor ao passar o mouse */
+}
+
+/* Links de navegação */
+a {
+    color: #33aaff; /* Cor azul para links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Mensagem de erro ou sucesso */
+.message {
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 20px; /* Margem superior */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo do corpo principal */
+.corpo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px; /* Margem superior */
+}
+
+/* Texto principal estilizado */
+.textprincipal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave para destacar o texto */
+    -webkit-text-stroke: 1px black; /* Contorno preto de 1px ao redor do texto */
+}
+
+/* Estilo do botão principal */
+.button-principal {
+    margin-top: 30px;
+    background-color: #2198FE;
+    color: white;
+    border-radius: 25%;
+    width: 150px;
+    height: 70px;
+    padding: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.button-principal:hover {
+    background-color: #1784cc;
+}
+
+/* Estilo do conteúdo secundário */
+.conteudo-secundario {
+    margin-top: 150px;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    border: #3f3f3fe8;
+    border-top: 1px solid #3f3f3fe8;
+}
+
+/* Texto secundário estilizado */
+.textsecond {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 30px; /* Margem inferior */
+    margin-top: 30px; /* Margem superior */
+}
+
+/* Container de imagens */
+.imagens-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Margem superior */
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+/* Estilo do painel de detalhes */
+.detail-panel {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fica no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    z-index: 1000; /* Fica acima de outros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteúdo do painel de detalhes */
+.panel-content {
+    background-color: rgb(15, 15, 15);
+    color: #ffffff;
+    padding: 20px;
+    border-top: 1px solid #3f3f3fe8;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* Para o posicionamento do botão de fechar */
+    line-height: 1.5; /* Aumenta o espaçamento entre as linhas */
+    overflow-y: auto; /* Permite rolar o conteúdo, caso necessário */
+    max-height: 80%; /* Limita a altura do painel */
+}
+
+/* Botão de fechar no painel de detalhes */
+.close-btn {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: transparent; /* Fundo transparente */
+}
+
+.close-btn:hover {
+    color: red; /* Muda a cor para vermelho ao passar o mouse */
+    background-color: rgb(15, 15, 15); /* Adiciona um fundo suave quando passa o mouse */
+}
+
+/* Título dentro do painel de detalhes */
+.panel-content h3 {
+    margin-bottom: 20px; /* Adiciona um espaçamento entre o título e a descrição */
+}
+
+/* Parágrafos dentro do painel de detalhes */
+.panel-content p {
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+    text-align: justify; /* Justifica o texto para melhor leitura */
+    word-wrap: break-word; /* Quebra palavras longas */
+}
+
+/* Estilo das imagens com borda */
+.imagens-container-borda {
+    border: 3px solid #3f3f3fe8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    width: 300px;
+    height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.imagens-container-borda:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Aumenta o efeito de sombra */
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: rgb(20, 20, 20);
+    border-top: 1px solid #444;
+    color: white;
+    padding: 40px 0;
+    text-align: center; /* Garante que o texto do footer ficará centralizado */
+}
+
+/* Container do conteúdo do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-evenly; /* Isso distribui as colunas igualmente */
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%; /* Garante que a largura do footer container seja 100% */
+    height: 100%;
+    max-width: 1200px; /* Define uma largura máxima para o footer */
+    margin: 0 auto; /* Isso centraliza o footer na tela */
+}
+
+/* Estilos das colunas do rodapé */
+.footer-info, .footer-links, .footer-social, .footer-newsletter {
+    flex: 1 1 25%; /* Faz com que cada item ocupe até 25% do espaço disponível */
+    min-width: 250px; /* Garante que as colunas não fiquem menores que 250px */
+}
+
+/* Estilo dos títulos no rodapé */
+.footer h3, .footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Estilo dos links no rodapé */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer a:hover {
+    color: #2198FE;
+}
+
+/* Estilo do campo de input do newsletter */
+.footer-newsletter input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Estilo do botão do newsletter */
+.footer-newsletter button {
+    padding: 10px;
+    background-color: #2198FE;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.inscreva-se-button:hover {
+    background-color: #1784cc;
+}
+
+/* Estilo do botão do rodapé */
+.footer-button {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+/* Remover pontos e bordas de listas e tabelas dentro do footer */
+.footer ul {
+    list-style-type: none; /* Remove os pontos */
+    padding-left: 0; /* Remove o espaçamento à esquerda */
+}
+
+.footer li {
+    margin-bottom: 10px; /* Se necessário, para espaçar os itens */
+}
+
+.footer table {
+    border-collapse: collapse; /* Remove o espaçamento entre as células */
+}
+
+.footer td, .footer th {
+    border: none; /* Remove a borda das células */
+}

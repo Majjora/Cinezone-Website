@@ -1,0 +1,383 @@
+/* Ajuste de responsividade para telas menores */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column; /* Organiza o cabeçalho em coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens dentro do cabeçalho */
+        margin: 20px; /* Ajusta a margem do cabeçalho */
+    }
+
+    .cinezone-logo {
+        margin-top: 0; /* Remove a margem superior */
+        width: 40vw; /* Largura proporcional para telas pequenas */
+        height: 40vw; /* Altura proporcional */
+    }
+
+    .language-selector, .login-container {
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        margin-top: 10px; /* Ajusta a margem superior */
+    }
+    /* Título da página */
+.titulo-text {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold;
+    margin-right: 125px;
+    margin-top: 20px;
+}
+
+/* Posicionando o seletor de idioma ao lado do botão "Entrar" */
+.language-selector {
+    margin-top: 15px; /* Ajusta a margem superior */
+}
+
+.language-selector select {
+    background-color: rgb(37, 37, 37); /* Fundo preto para o seletor */
+    color: rgb(255, 255, 255); /* Cor do texto branco */
+    border: 2px solid #ffffff; /* Borda branca */
+    border-radius: 15%; /* Bordas arredondadas */
+    width: 120px; /* Largura fixa */
+    height: 50px; /* Altura consistente */
+    padding: 10px; /* Padding interno */
+    font-size: 16px; /* Tamanho da fonte */
+    appearance: none; /* Remove a aparência padrão */
+}
+
+.language-selector option {
+    background-color: rgb(37, 37, 37); /* Fundo preto para as opções */
+    color: white; /* Cor do texto branco */
+}
+
+/* Estilo do corpo principal */
+.corpo-principal {
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    border: #3f3f3fe8;
+    border-top: 1px solid #3f3f3fe8;
+    text-align: left;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+ }
+
+ .titulo-principal {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-left: 500px;
+}
+
+.text {
+    margin-left: 500px;
+}
+
+.lista-text {
+    margin-left: 500px;
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: rgb(20, 20, 20);
+    border-top: 1px solid #444;
+    color: white;
+    padding: 40px 0;
+    text-align: center; /* Garante que o texto do footer ficará centralizado */
+ }
+
+ /* Container do conteúdo do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-evenly; /* Isso distribui as colunas igualmente */
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%; /* Garante que a largura do footer container seja 100% */
+    max-width: 1200px; /* Define uma largura máxima para o footer */
+    margin: 0 auto; /* Isso centraliza o footer na tela */
+}
+
+/* Estilos das colunas do rodapé */
+.footer-info, .footer-links, .footer-social, .footer-newsletter {
+    flex: 1 1 25%; /* Faz com que cada item ocupe até 25% do espaço disponível */
+    min-width: 250px; /* Garante que as colunas não fiquem menores que 250px */
+}
+
+/* Estilo dos títulos no rodapé */
+.footer h3, .footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Estilo dos links no rodapé */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer a:hover {
+    color: #2198FE;
+}
+
+/* Estilo do campo de input do newsletter */
+.footer-newsletter input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Estilo do botão do newsletter */
+.footer-newsletter button {
+    padding: 10px;
+    background-color: #2198FE;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+ }
+
+ /* Container do conteúdo do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-evenly; /* Isso distribui as colunas igualmente */
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%; /* Garante que a largura do footer container seja 100% */
+    max-width: 1200px; /* Define uma largura máxima para o footer */
+    margin: 0 auto; /* Isso centraliza o footer na tela */
+}
+
+/* Estilos das colunas do rodapé */
+.footer-info, .footer-links, .footer-social, .footer-newsletter {
+    flex: 1 1 25%; /* Faz com que cada item ocupe até 25% do espaço disponível */
+    min-width: 250px; /* Garante que as colunas não fiquem menores que 250px */
+}
+
+/* Estilo dos títulos no rodapé */
+.footer h3, .footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Estilo dos links no rodapé */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer a:hover {
+    color: #2198FE;
+}
+
+/* Estilo do campo de input do newsletter */
+.footer-newsletter input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Estilo do botão do newsletter */
+.footer-newsletter button {
+    padding: 10px;
+    background-color: #2198FE;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+}
+
+/* Resetando margens e espaçamentos */
+* {
+    margin: 0; /* Remove todas as margens */
+    padding: 0; /* Remove todos os espaçamentos */
+    box-sizing: border-box; /* Melhora o controle de caixas */
+}
+
+/* Estilo do corpo da página */
+body {
+    margin: 0;
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    width: 100%;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Cabeçalho da página */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgb(20, 20, 20);
+    border: #3f3f3fe8;
+    border-top: 1px solid #3f3f3fe8;
+    width: 100%;
+    height: 80px;
+}
+
+.cinezone-logo {
+    width: 250px; /* Define a largura do logo */
+    height: 250px; /* Define a altura do logo */
+    margin-top: -85px; /* Ajusta a margem superior para posicionar o logo */
+    box-shadow: 4 40px 1px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao logo */
+}
+
+/* Título da página */
+.titulo-text {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold;
+    margin-right: 125px;
+    margin-top: 20px;
+}
+
+/* Posicionando o seletor de idioma ao lado do botão "Entrar" */
+.language-selector {
+    margin-top: 15px; /* Ajusta a margem superior */
+}
+
+.language-selector select {
+    background-color: rgb(37, 37, 37); /* Fundo preto para o seletor */
+    color: rgb(255, 255, 255); /* Cor do texto branco */
+    border: 2px solid #ffffff; /* Borda branca */
+    border-radius: 15%; /* Bordas arredondadas */
+    width: 120px; /* Largura fixa */
+    height: 50px; /* Altura consistente */
+    padding: 10px; /* Padding interno */
+    font-size: 16px; /* Tamanho da fonte */
+    appearance: none; /* Remove a aparência padrão */
+}
+
+.language-selector option {
+    background-color: rgb(37, 37, 37); /* Fundo preto para as opções */
+    color: white; /* Cor do texto branco */
+}
+
+/* Estilo do corpo principal */
+.corpo-principal {
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    border: #3f3f3fe8;
+    border-top: 1px solid #3f3f3fe8;
+    text-align: left;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.titulo-principal {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-left: 500px;
+}
+
+.text {
+    margin-left: 500px;
+}
+
+.lista-text {
+    margin-left: 500px;
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: rgb(20, 20, 20);
+    border-top: 1px solid #444;
+    color: white;
+    padding: 40px 0;
+    text-align: center; /* Garante que o texto do footer ficará centralizado */
+}
+
+/* Container do conteúdo do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-evenly; /* Isso distribui as colunas igualmente */
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%; /* Garante que a largura do footer container seja 100% */
+    max-width: 1200px; /* Define uma largura máxima para o footer */
+    margin: 0 auto; /* Isso centraliza o footer na tela */
+}
+
+/* Estilos das colunas do rodapé */
+.footer-info, .footer-links, .footer-social, .footer-newsletter {
+    flex: 1 1 25%; /* Faz com que cada item ocupe até 25% do espaço disponível */
+    min-width: 250px; /* Garante que as colunas não fiquem menores que 250px */
+}
+
+/* Estilo dos títulos no rodapé */
+.footer h3, .footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Estilo dos links no rodapé */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer a:hover {
+    color: #2198FE;
+}
+
+/* Estilo do campo de input do newsletter */
+.footer-newsletter input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Estilo do botão do newsletter */
+.footer-newsletter button {
+    padding: 10px;
+    background-color: #2198FE;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.inscreva-se-button:hover {
+    background-color: #1784cc;
+}
+
+/* Estilo do botão do rodapé */
+.footer-button {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+/* Remover pontos e bordas de listas e tabelas dentro do footer */
+.footer ul {
+    list-style-type: none; /* Remove os pontos */
+    padding-left: 0; /* Remove o espaçamento à esquerda */
+}
+
+.footer li {
+    margin-bottom: 10px; /* Se necessário, para espaçar os itens */
+}
+
+.footer table {
+    border-collapse: collapse; /* Remove o espaçamento entre as células */
+}
+
+.footer td, .footer th {
+    border: none; /* Remove a borda das células */
+}

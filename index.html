@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definindo o charset para UTF-8 (suporte a caracteres especiais) -->
+    <meta charset="UTF-8">
+    
+    <!-- Compatibilidade com o Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Meta tag para controle de responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    
+    <!-- Título da página -->
+    <title id="title">Cine Zone - Assista Séries e Filmes</title>
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="cabecalho">
+        <!-- Logo da Cinezone -->
+        <img class="cinezone-logo" src="images/cinezonelogo.png" alt="cinezonelogo">
+        
+        <!-- Seletor de idioma -->
+        <section class="language-selector">
+            <label for="language"></label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="pt-br">Português</option>
+                <option value="en">English</option>
+            </select>
+        </section>
+        
+        <!-- Botão para exibir o formulário de login -->
+        <section class="login-container">
+            <button onclick="toggleLoginForm()">Entrar</button>
+        </section>
+
+        <!-- Formulário de login -->
+        <div id="login-form" class="login-form">
+            <h2 id="login-title">Entrar</h2>
+            <form onsubmit="return fakeLogin(event)">
+                <input type="text" id="username" placeholder="Usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit" id="submitButton">Entrar</button>
+            </form>
+            <!-- Botão para fechar o formulário de login -->
+            <button id="closeButton" onclick="toggleLoginForm()">Fechar</button>
+            
+            <!-- Links para registrar e recuperar senha -->
+            <p><a href="#" id="register-link" onclick="toggleLoginForm(); toggleRegisterForm();">Registre-se</a></p>
+            <p><a href="#" id="forgot-password-link" onclick="toggleLoginForm(); toggleForgotPasswordForm();">Recuperar Senha</a></p>
+        </div>
+
+        <!-- Mensagem de erro ou sucesso -->
+        <div id="message" class="message"></div>
+
+        <!-- Formulário de registro -->
+        <div id="register-form" class="login-form">
+            <h2 id="register-title">Registrar-se</h2>
+            <form onsubmit="return fakeRegister(event)">
+                <input type="text" id="new-username" placeholder="Nome de usuário" required>
+                <input type="email" id="new-email" placeholder="Email" required>
+                <input type="password" id="new-password" placeholder="Senha" required>
+                <button id="registerButton" type="submit">Registrar</button>
+            </form>
+            <!-- Botão para fechar o formulário de registro -->
+            <button id="closeRegisterButton" onclick="toggleRegisterForm()">Fechar</button>
+        </div>
+
+        <!-- Formulário para recuperação de senha -->
+        <div id="forgot-password-form" class="login-form">
+            <h2 id="forgot-password-title">Recuperar Senha</h2>
+            <form onsubmit="return fakeRecoverPassword(event)">
+                <input type="email" id="recover-email" placeholder="Digite seu email" required>
+                <button id="recoverButton" type="submit">Enviar</button>
+            </form>
+            <!-- Botão para fechar o formulário de recuperação de senha -->
+            <button id="closeForgotPasswordButton" onclick="toggleForgotPasswordForm()">Fechar</button>
+        </div>
+    </header>
+
+    <!-- Corpo principal da página -->
+    <main class="corpo-principal">
+        <h1 id="textprincipal" class="textprincipal">Quem somos nós?</h1>
+            <button class="button-principal" id="saibamaisbutton">Saiba mais</button>
+            <div class="conteudo-secundario">
+                <h2 class="textsecond" id="textsecond">DESTAQUES</h2>
+                <div class="imagens-container">
+                    <img src="images/filmes1.png" alt="filmes1" class="imagens-container-borda" onclick="openDetailPanel('Action', 'Em uma missão de resgate, um ex-soldado se vê em uma corrida contra o tempo para salvar sua filha de um grupo de criminosos implacáveis. Armado e perigoso, ele deve enfrentar traições, explosões e perigos inesperados enquanto luta pela sobrevivência em um cenário tenso e cheio de adrenalina. Cada passo é crucial, e a única chance de vencer é confiar na sua habilidade para escapar do inferno em que se encontra.')">
+                    <img src="images/filmes2.png" alt="filmes2" class="imagens-container-borda" onclick="openDetailPanel('Anime', 'Em uma floresta sombria, três amigos se veem em fuga de uma criatura misteriosa e aterrorizante que os persegue incansavelmente. Enquanto correm pela densa vegetação, eles precisam usar suas habilidades e inteligência para escapar das garras do monstro. Mas a amizade e o trabalho em equipe serão essenciais para sobreviver a essa ameaça sobrenatural. Com cada passo, o medo aumenta, e as escolhas deles podem ser a diferença entre a vida e a morte.')">
+                    <img src="images/filmes3.png" alt="filmes3" class="imagens-container-borda" onclick="openDetailPanel('Stranger', 'Em uma pequena cidade, um grupo de jovens se vê envolvido em um mistério que vai além de qualquer coisa que possam imaginar. Quando acontecimentos inexplicáveis começam a ocorrer, eles unem forças com um policial local para desvendar a verdade. Mas quanto mais se aprofundam, mais perigosas as revelações se tornam, e a linha entre o normal e o sobrenatural começa a desaparecer. Eles conseguirão descobrir o segredo por trás dos eventos antes que seja tarde demais?')">
+                    <img src="images/filmes4.png" alt="filmes4" class="imagens-container-borda" onclick="openDetailPanel('Stardust', 'Em uma missão para explorar os confins do espaço, uma tripulação militar é confrontada com um inimigo desconhecido, uma força alienígena que ameaça destruir tudo o que conhecem. No centro da batalha está uma corajosa comandante, que precisa liderar sua equipe e enfrentar os mistérios do universo para salvar a Terra. Entre traições e batalhas intergalácticas, ela descobre segredos que podem mudar o destino da humanidade. A luta por sobrevivência nunca foi tão intensa.')">
+                    <img src="images/filmes5.png" alt="filmes5" class="imagens-container-borda" onclick="openDetailPanel('Mystery', 'Quando uma antiga bibliotecária encontra um livro misterioso em seu porão, ela se vê involuntariamente envolvida em uma trama cheia de segredos e conspirações. Com a ajuda de dois investigadores locais, ela começa a desvendar pistas e mistérios, levando a um caso que remonta a décadas. À medida que o enigma se aprofunda, cada resposta traz novas perguntas, e o perigo de revelar a verdade se torna cada vez mais iminente. A chave para resolver o mistério está em suas mãos, mas ela poderá sobreviver a tudo o que irá descobrir?')">
+                </div>
+                     <br><br><br><br><br><br><br><br><br>
+            </div>
+
+    <!-- Painel de detalhes -->
+    <div id="detailPanel" class="detail-panel">
+         <div class="panel-content">
+            <span id="closeBtn" class="close-btn">&times;</span>
+            <h3 id="panelTitle"></h3>
+            <p id="panelDescription"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>CineZone</h3>
+                <p id="footer-text">Explore a melhor seleção de filmes, séries desenhos e animes online. A CineZone oferece uma experiência de streaming inovadora com uma vasta biblioteca de títulos.</p>
+            </div>
+    
+            <div class="footer-links">
+                <h4 id="footer-links-text">Links Rápidos</h4>
+                <ul>
+                    <li><a href="about-us.html" target="_blank" id="footer-sobrenos-text">Sobre nós</a></li>
+                    <li><a href="terms-of-use.html" target="_blank" id="footer-termos-text">Termos de Uso</a></li>
+                    <li><a href="privacy-policy.html" target="_blank" id="footer-politica-text">Política de Privacidade</a></li>
+                    <li><a href="help.html" target="_blank" id="footer-ajuda-text">Ajuda</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h4 id="footer-social-text">Redes Sociais</h4>
+                <ul>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank">X</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Digite seu e-mail" />
+                <button class="inscreva-se-button" id="inscreva-se-button">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-button">
+            <p id="footer-final-text">© 2025 CineZone. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
