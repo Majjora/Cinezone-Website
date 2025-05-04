@@ -29,6 +29,6 @@ CineZone é uma plataforma web interativa para explorar informações sobre film
 4. Use a seleção de idioma no topo da página.
 5. Consulte a seção de "Ajuda" para mais instruções.
 
-## 🧑‍💻 Autores
+## 🧑‍💻 Autor
 
 - Felipe Gabriel Chustak Correia (Majjora)
