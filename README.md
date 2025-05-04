@@ -1,37 +1,51 @@
-# CineZone 🎬
+# 🌟 Portfólio Pessoal - Majjora
 
-CineZone é uma plataforma web interativa para explorar informações sobre filmes de forma dinâmica, com suporte multilíngue, interface amigável e recursos de acessibilidade.
+Este é o meu portfólio pessoal, criado com HTML e CSS puros. Nele apresento um pouco sobre mim, meus projetos e como entrar em contato comigo. O site foi desenvolvido como parte da minha formação em Front-End, unindo os conhecimentos adquiridos nos cursos da Alura e na faculdade de Análise e Desenvolvimento de Sistemas.
 
-## 📁 Estrutura do Projeto
+## 🔗 Acesse o Projeto
 
-- `index.html` - Página inicial com login, registro e catálogo de filmes.
-- `about-us.html` - Página sobre a equipe ou projeto.
-- `help.html` - Página de ajuda com instruções de uso do site.
-- `privacy-policy.html` - Política de privacidade multilíngue.
-- `terms-of-use.html` - Termos de uso multilíngues.
-- `assets/` - Arquivos de estilo (CSS).
-- `images/` - Imagens utilizadas no site.
-- `js/` - Scripts JavaScript para funcionalidades do site.
+➡️ [Clique aqui para acessar o portfólio online](https://portifolio-phi-liard.vercel.app/)
 
-## ⚙️ Funcionalidades
+## 💻 Tecnologias Utilizadas
 
-- Login, registro e recuperação de senha simulados
-- Painel de detalhes de filmes com título e descrição
-- Suporte multilíngue via `JavaScript` com tradução dinâmica
-- Página de ajuda com explicações de navegação
-- Estrutura pronta para integração com back-end real
+- HTML5
+- CSS3
+- Flexbox
+- Responsividade
 
-## 📌 Como usar
+## 📱 Funcionalidades
 
-1. Abra `index.html` em seu navegador.
-2. Interaja com os formulários de login/registro.
-3. Navegue pelo catálogo de filmes.
-4. Use a seleção de idioma no topo da página.
-5. Consulte a seção de "Ajuda" para mais instruções.
+- Navegação entre seções: Home, Sobre mim e Currículo 
+- Design responsivo: adapta-se a telas de celular, tablets e desktop
+- Ícones personalizados com [Ionicons](https://ionic.io/ionicons)
 
-## 🧑‍💻 Autores
+## 🗂️ Estrutura do Projeto
 
-- Felipe Gabriel Chustak Correia (Majjora)
-- Alana Ortiz
-- Diogo Neris
-- https://github.com/Majjora
+Portifolio/
+├── index.html
+├── about.html
+├── cv.html
+├── styles/
+  ├── style.css
+├── assets/
+│ ├── imagens (logos, avatar, fundo)
+│ 
+└── README.md
+
+## 🚀 Melhorias Futuras
+
+- Animações com JavaScript
+- Modo escuro (dark mode)
+- Integração com formulário de contato funcional
+- Internacionalização (PT/EN)
+
+## 📬 Contato
+
+- ✉️ Email: chustakcorreia.felipe@gmail.com  
+- 💼 LinkedIn: [linkedin.com/in/seuperfil](www.linkedin.com/in/felipechustak)  
+- 🧑‍💻 GitHub: [github.com/Majjora](https://github.com/Majjora)
+
+---
+
+*Desenvolvido com 💙 por Majjora - estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e sempre em busca de evoluir como desenvolvedor.*
+
